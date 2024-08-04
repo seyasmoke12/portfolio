@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import Aside from './components/Aside'
+import Navbar from './components/Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,13 +12,13 @@ function App() {
   return (
     <>
       <Aside />
-      <div className="main-content">
-       {/* <Navbar/> */}
+       <div className="main-content">
+       <Navbar/>
         <section style={{
-          scrollBehavior: "smooth"
+       scrollBehavior: "smooth"
         }}><Outlet/></section>
       </div>
-    </>
+     </>
   )
 }
 
