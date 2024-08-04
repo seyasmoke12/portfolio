@@ -1,56 +1,23 @@
 [
     {
       "id": 1,
-      "title": "Finance",
+      "title": "instagram",
       "category": "Web development",
-      "image": "images/project-1.jpg"
+      "image": "https://pngimg.com/uploads/instagram/instagram_PNG10.png",
+      "link": "https://instag-clone-project.vercel.app"
     },
     {
       "id": 2,
-      "title": "Orizon",
+      "title": "Netflix",
       "category": "Web development",
-      "image": "images/project-2.png"
+      "image": "https://th.bing.com/th/id/OIP.3f-gyLPI4fXP7oofglJNXQHaHa?rs=1&pid=ImgDetMain",
+      "link":"https://netflix-pro-eight.vercel.app"
     },
     {
       "id": 3,
-      "title": "Fundo",
-      "category": "Web design",
-      "image": "images/project-3.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Brawlhalla",
-      "category": "Applications",
-      "image": "images/project-3.jpg"
-    },
-    {
-      "id": 5,
-      "title": "DSM.",
-      "category": "Web design",
-      "image": "images/project-5.png"
-    },
-    {
-      "id": 6,
-      "title": "MetaSpark",
-      "category": "Web design",
-      "image": "images/project-6.png"
-    },
-    {
-      "id": 7,
-      "title": "Summary",
+      "title": "Recipe web app",
       "category": "Web development",
-      "image": "images/project-7.png"
-    },
-    {
-      "id": 8,
-      "title": "Task Manager",
-      "category": "Applications",
-      "image": "images/project-8.jpg"
-    },
-    {
-      "id": 9,
-      "title": "Arrival",
-      "category": "Web development",
-      "image": "images/project-9.png"
+      "image": "images/recipe.png",
+      "link":"https://recipe-chi-black.vercel.app"
     }
   ]
