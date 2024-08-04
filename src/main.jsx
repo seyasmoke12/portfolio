@@ -7,15 +7,22 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import About from './pages/About/About.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+       children: [
+      {
+        path: "/",
+        element: <About/>,
+      },
+      
+    ]
   },
 ]);
 
-// my name is seid abdela
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
