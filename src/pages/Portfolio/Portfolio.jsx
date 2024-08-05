@@ -1,11 +1,23 @@
 import { useState, useEffect } from 'react';
 import { FaRegEye } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [projectsWithLink, setProjectsWithLink] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('All');
+      const paragraphStyle = {
+    fontFamily: 'Arial, sans-serif',
+    fontSize: '16px',
+    color: 'white',
+    margin: '10px 0'
+  };
+
+  const linkStyle = {
+    color: '#0073e6',
+    textDecoration: 'none'
+  };
 
   useEffect(() => {
     fetch('/projects.json')
@@ -33,7 +45,13 @@ const Portfolio = () => {
     <section className="portfolio" data-page="portfolio">
       <header>
         <h2 className="h2 article-title">Projects</h2>
+       
       </header>
+
+       <p style={paragraphStyle}>
+      GitHub account: <a href="https://github.com/seyasmoke12" style={linkStyle}>https://github.com/seyasmoke12</a>
+    </p>
+    <br />
 
       
       <ul className="filter-list">
@@ -61,7 +79,7 @@ const Portfolio = () => {
               data-category={project.category}
               key={project.id}
             >
-              <a href={project.link}>
+              <Link to={project.link}>
                 <figure className="project-img">
                   <div className="project-item-icon-box">
                     <FaRegEye />
@@ -70,7 +88,7 @@ const Portfolio = () => {
                 </figure>
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-category">{project.category}</p>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

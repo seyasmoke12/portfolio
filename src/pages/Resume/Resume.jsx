@@ -4,6 +4,20 @@ import SkillItem from './SkillItem';
 import TimelineItem from './TimelineItem';
 
 function Resume() {
+
+
+
+    const paragraphStyle = {
+    fontFamily: 'Arial, sans-serif',
+    fontSize: '16px',
+    color: 'white',
+    margin: '10px 0'
+  };
+
+  const linkStyle = {
+    color: '#0073e6',
+    textDecoration: 'none'
+  };
   return (
     <section>
         <header>
@@ -59,13 +73,20 @@ function Resume() {
           />
         </ol>
       </div>
+      <br />
+     <p style={paragraphStyle}>
+      GitHub account: <a href="https://github.com/seyasmoke12" style={linkStyle}>https://github.com/seyasmoke12</a>
+    </p>
+
       <div className="skill">
+
         <h3 className="h3 skills-title">My skills</h3>
         <ul className="skills-list content-card">
           <SkillItem title="HTML" value={90} />
           <SkillItem title="Css" value={90} />
           <SkillItem title="Tailwind CSS" value={70} />
           <SkillItem title="JavaScript" value={87} />
+          <SkillItem title="jquery" value={80} />
           <SkillItem title="Node" value={90} />
           <SkillItem title="Express.js" value={80} />
           <SkillItem title="React" value={95} />

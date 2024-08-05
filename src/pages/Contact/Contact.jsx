@@ -1,4 +1,38 @@
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
 const Contact = () => {
+
+
+
+     const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(import.meta.env.VITE_APP_SERVICE_KEY, import.meta.env.VITE_APP_TEMPLATE_KEY, form.current, {
+        publicKey: import.meta.env.VITE_APP_API_KEY,
+      })
+      .then(
+        () => {
+            alert("you have successfully submited")
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert("please try again later")
+        },
+      );
+  };
+
+
+
+
+
+
+
+
+
   return (
     <section className="contact" data-page="contact">
 
@@ -19,7 +53,7 @@ const Contact = () => {
 
         <h3 className="h3 form-title">Contact Form</h3>
 
-        <form action="#" className="form" data-form>
+        <form ref={form} onSubmit={sendEmail} className="form" data-form>
 
           <div className="input-wrapper">
             <input type="text" name="fullname" className="form-input" placeholder="Full name" required data-form-input />
