@@ -7,6 +7,13 @@
       "link": "https://instag-clone-project.vercel.app"
     },
     {
+      "id": 4,
+      "title": "Amazon",
+      "category": "Web development",
+      "image": "https://www.gumpo.co.uk/wp-content/uploads/2022/04/Amazon-yellow.png",
+      "link":"https://amazon-clone-n3t5tmszb-seids-projects.vercel.app"
+    },
+    {
       "id": 2,
       "title": "Netflix",
       "category": "Web development",
